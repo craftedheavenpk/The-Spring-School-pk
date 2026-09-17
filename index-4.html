@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Springs School Lahore — Play Group to Matric. School information, admission, uniform and stationery shop with WhatsApp ordering.">
+<meta name="theme-color" content="#0f5b3d">
+<title>The Springs School Lahore | Play Group to Matric</title>
+<style>
+:root{
+  --green:#17483A;--green2:#2F7D62;--red:#B3262E;--gold:#C9A227;
+  --cream:#F7F3EA;--ink:#18332B;--muted:#68766F;--white:#FFFFFF;
+  --shadow:0 16px 45px rgba(13,48,34,.12);--radius:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}
+body{background:
+  radial-gradient(circle at 8% 8%,rgba(201,162,39,.06),transparent 24%),
+  radial-gradient(circle at 92% 28%,rgba(47,125,98,.05),transparent 25%),
+  var(--cream)}
+.card,.product,.location-box,.ad-box{box-shadow:0 18px 48px rgba(23,72,58,.10)}
+
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.container{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #E5DED1}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;color:var(--green);font-size:1.05rem}
+.brand img{width:48px;height:48px;object-fit:contain;border-radius:50%}
+.navlinks{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.navlinks a{padding:10px 13px;border-radius:12px;font-weight:700;color:#29473D}
+.navlinks a:hover{background:#EEF4F0;color:var(--green)}
+.cart-btn,.primary{border:0;background:var(--green);color:#fff;padding:12px 17px;border-radius:13px;font-weight:800;cursor:pointer;box-shadow:0 7px 18px rgba(13,90,60,.18)}
+.cart-btn:hover,.primary:hover{background:#08462f}
+.menu{display:none;border:0;background:#EEF4F0;padding:10px;border-radius:12px;font-size:20px}
+
+.hero{padding:34px 0 25px}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:24px;align-items:stretch}
+.hero-copy{background:linear-gradient(135deg,#123E33 0%,#246650 58%,#3B8067 100%);color:#fff;border-radius:30px;padding:48px 42px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.hero-copy:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;right:-90px;bottom:-110px;background:rgba(255,255,255,.09)}
+.badge{display:inline-flex;background:#ffffff1a;border:1px solid #ffffff36;padding:7px 12px;border-radius:99px;font-weight:800;font-size:.88rem}
+h1{font-size:clamp(2.2rem,5vw,4.5rem);line-height:1.02;margin:17px 0}
+.hero-copy p{font-size:1.08rem;max-width:650px;color:#F4F7F2}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.hero-actions a{padding:13px 17px;border-radius:13px;font-weight:800}
+.btn-white{background:#fff;color:var(--green)}
+.btn-outline{border:1px solid #ffffff66;color:#fff}
+.hero-img{border-radius:30px;overflow:hidden;box-shadow:var(--shadow);background:#fff;min-height:430px}
+.hero-img img{width:100%;height:100%;object-fit:cover;display:block}
+
+.iqbal-banner{margin:20px 0 36px;border-radius:26px;overflow:hidden;background:linear-gradient(120deg,#FFFDF8,#EEF3EE);border:1px solid #E2DDD1;box-shadow:var(--shadow)}
+.iqbal-inner{padding:30px 34px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
+.iqbal-ar{font-size:clamp(1.45rem,3vw,2.4rem);font-weight:800;line-height:1.65;color:#17483A;direction:rtl;text-align:right}
+.iqbal-en{color:var(--muted);font-size:.98rem;margin-top:5px}
+.iqbal-tag{background:linear-gradient(135deg,#B3262E,#8F1D25);color:#fff;padding:10px 16px;border-radius:15px;font-weight:900;white-space:nowrap}
+
+.section{padding:45px 0}
+.section-head{text-align:center;margin-bottom:25px}
+.kicker{color:#B3262E;font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem}
+h2{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.15;margin:7px 0}
+.lead{color:var(--muted);max-width:760px;margin:auto}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+.card{background:#fff;border:1px solid #e5eee7;border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}
+.card h3{margin-bottom:9px}
+.features{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.feature{padding:18px;border-radius:17px;background:#F1F5F1;border:1px solid #DDE6DF}
+.feature b{display:block;margin-bottom:3px}
+.feature span{font-size:.9rem;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:17px}
+.stat{padding:16px;text-align:center;background:#fff8df;border-radius:16px}
+.stat strong{font-size:1.55rem;color:var(--green);display:block}
+
+.banners{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.banner-card{border-radius:24px;overflow:hidden;box-shadow:var(--shadow);background:#fff}
+.banner-card img{width:100%;display:block;max-height:530px;object-fit:cover}.banner-caption{padding:12px 15px;font-weight:800;color:var(--green)}
+.location{display:grid;grid-template-columns:1fr .8fr;gap:22px}
+.location-box{background:linear-gradient(145deg,#FFFDF9,#EEF3EE);padding:28px;border-radius:24px;border:1px solid #dfeae1}
+.location-box p{color:var(--muted);margin:8px 0 18px}
+.map-link{display:inline-block;padding:12px 16px;background:linear-gradient(135deg,#B3262E,#8F1D25);color:#fff;border-radius:12px;font-weight:800}
+
+.categories{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.cat{border:1px solid #dce9df;background:#fff;padding:16px;border-radius:18px;text-align:center;font-weight:800;cursor:pointer}
+.cat:hover,.cat.active{background:var(--green);color:#fff}
+.cat span{display:block;font-size:1.7rem;margin-bottom:5px}
+
+.shop-toolbar{display:flex;gap:10px;justify-content:space-between;align-items:center;margin:20px 0;flex-wrap:wrap}
+.search{flex:1;min-width:230px;padding:13px 15px;border:1px solid #d6e1da;border-radius:13px;background:#fff;outline:none}
+.search:focus{border-color:#2F7D62}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.product{background:#fff;border:1px solid #e2ebe5;border-radius:20px;overflow:hidden;box-shadow:0 10px 28px rgba(13,48,34,.08);display:flex;flex-direction:column}
+.product-img{aspect-ratio:4/3;background:#F3EFE6;overflow:hidden}
+.product-img img{width:100%;height:100%;object-fit:cover;display:block}
+.product-body{padding:16px;display:flex;flex-direction:column;gap:7px;flex:1}
+.product-cat{font-size:.72rem;color:var(--green2);font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.product h3{font-size:1.05rem}
+.product p{font-size:.85rem;color:var(--muted);min-height:42px}
+.price{font-size:1.18rem;font-weight:950;color:#A51F29}
+.product .primary{width:100%;margin-top:auto}
+.note{font-size:.78rem;color:var(--muted);background:#F7F5EF;padding:8px 10px;border-radius:10px}
+
+.admission{background:linear-gradient(135deg,#FFF8E6,#EEF3EE);border:1px solid #E7E0CF;border-radius:30px;padding:35px}
+.ad-grid{display:grid;grid-template-columns:1fr .85fr;gap:24px;align-items:center}
+.admission ul{list-style:none;margin-top:15px;display:grid;gap:8px}
+.admission li:before{content:"✓";font-weight:900;color:var(--green);margin-right:8px}
+.ad-box{background:#fff;padding:23px;border-radius:22px;box-shadow:var(--shadow)}
+.ad-box a{display:block;text-align:center;margin-top:12px}
+
+footer{background:#102F29;color:#e9f3ed;margin-top:40px}
+.footer{padding:34px 0;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:25px}
+.footer h3{margin-bottom:8px;color:#fff}
+.footer p,.footer a{color:#C9D9D2;font-size:.92rem}
+.copyright{text-align:center;border-top:1px solid #ffffff18;padding:15px;color:#aec5b8;font-size:.82rem}
+
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:1100;display:none}
+.cart-overlay.show{display:block}
+.cart-panel{position:absolute;right:0;top:0;height:100%;width:min(440px,94vw);background:#fff;box-shadow:-20px 0 50px rgba(0,0,0,.2);padding:22px;display:flex;flex-direction:column}
+.cart-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e4ebe6;padding-bottom:14px}
+.close{border:0;background:#F0F2EE;border-radius:10px;padding:9px 12px;cursor:pointer}
+.cart-items{overflow:auto;flex:1;padding:12px 0}
+.empty{text-align:center;color:var(--muted);padding:35px 10px}
+.cart-item{display:grid;grid-template-columns:58px 1fr auto;gap:10px;align-items:center;padding:11px 0;border-bottom:1px solid #eef2ef}
+.cart-item img{width:58px;height:58px;border-radius:12px;object-fit:cover;background:#F3EFE6}
+.qty{display:flex;align-items:center;gap:7px;margin-top:5px}
+.qty button{width:28px;height:28px;border:0;border-radius:8px;background:#EEF4F0;color:var(--green);font-weight:900;cursor:pointer}
+.remove{border:0;background:none;color:#b43a3a;font-size:.76rem;cursor:pointer}
+.cart-total{border-top:1px solid #dfe7e2;padding-top:14px;font-size:1.2rem;font-weight:900;display:flex;justify-content:space-between}
+.checkout{margin-top:14px}
+.checkout label{display:block;font-size:.8rem;font-weight:800;margin:9px 0 4px}
+.checkout input,.checkout select{width:100%;padding:11px 12px;border:1px solid #d7e2db;border-radius:10px;outline:none;background:#fff}
+.checkout input:focus,.checkout select:focus{border-color:#2F7D62}
+.checkout .primary{width:100%;margin-top:13px}
+.toast{position:fixed;left:50%;bottom:25px;transform:translateX(-50%) translateY(20px);background:#102F29;color:#fff;padding:12px 18px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:1500}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media(max-width:1000px){.product-grid{grid-template-columns:repeat(3,1fr)}.categories{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:800px){
+  .navlinks{display:none;position:absolute;left:4%;right:4%;top:70px;background:#fff;padding:12px;border-radius:16px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}
+  .navlinks.open{display:flex}.navlinks a{text-align:center}.menu{display:block}
+  .hero-grid,.about-grid,.location,.ad-grid{grid-template-columns:1fr}.hero-copy{padding:35px 27px}.hero-img{min-height:330px}
+  .banners{grid-template-columns:1fr}.product-grid{grid-template-columns:repeat(2,1fr)}
+  .footer{grid-template-columns:1fr}.iqbal-inner{grid-template-columns:1fr}.iqbal-tag{justify-self:start}
+}
+@media(max-width:500px){
+  .nav{height:68px}.brand img{width:40px;height:40px}.brand{font-size:.9rem}
+  .cart-btn{padding:10px 12px}.hero{padding-top:18px}.hero-copy{border-radius:22px}.hero-img{border-radius:22px}
+  .product-grid{grid-template-columns:1fr}.categories{grid-template-columns:repeat(2,1fr)}
+  .features{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.card{padding:21px}
+  .iqbal-banner{border-radius:20px}.iqbal-inner{padding:23px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home"><img src="assets/school-logo.png" alt="The Springs School Lahore logo"><span>The Springs School Lahore</span></a>
+    <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+    <nav class="navlinks" id="navLinks">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#admissions">Admissions</a><a href="#shop">School Shop</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-btn" onclick="openCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="badge">🌱 Play Group to Matric</span>
+      <h1>Nurture for today.<br>Learn for tomorrow.</h1>
+      <p>Welcome to The Springs School Lahore — a caring learning environment where children grow through knowledge, character, creativity, confidence and meaningful experiences.</p>
+      <div class="hero-actions">
+        <a class="btn-white" href="#admissions">🎓 Explore Admissions</a>
+        <a class="btn-outline" href="#shop">🛍️ School Shop</a>
+      </div>
+    </div>
+    <div class="hero-img"><img src="assets/school-banner-1.png" alt="The Springs School Lahore banner"></div>
+  </div>
+</section>
+
+<section class="container iqbal-banner">
+  <div class="iqbal-image"><img src="assets/iqbal-knowledge-banner.png" alt="Allama Iqbal knowledge banner"></div>
+  <div class="iqbal-inner">
+    <div>
+      <div class="iqbal-ar">ستاروں سے آگے جہاں اور بھی ہیں<br>ابھی عشق کے امتحاں اور بھی ہیں</div>
+      <div class="iqbal-en">— Allama Muhammad Iqbal • A reminder to keep learning, exploring and reaching beyond what we already know.</div>
+    </div>
+    <div class="iqbal-tag">Knowledge • Character • Growth</div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Our School</div><h2>Learning with care, purpose & confidence</h2><p class="lead">The Springs School Lahore provides education from Play Group to Matric with a focus on strong foundations, positive character and a joyful school experience.</p></div>
+    <div class="about-grid">
+      <div class="card">
+        <h3>🏫 A place where children can grow</h3>
+        <p>We aim to provide an encouraging environment where students can learn confidently, ask questions, discover their interests and develop responsibility. Our school combines classroom learning with activities that support communication, creativity, teamwork and healthy development.</p>
+        <div class="stats"><div class="stat"><strong>Play–10</strong><span>Classes</span></div><div class="stat"><strong>🌳</strong><span>Playground</span></div><div class="stat"><strong>👩‍🏫</strong><span>Qualified Teachers</span></div></div>
+      </div>
+      <div class="features">
+        <div class="feature"><b>👩‍🏫 Qualified Teachers</b><span>Supportive teaching and attention to students.</span></div>
+        <div class="feature"><b>🌬️ Airy Classrooms</b><span>Comfortable spaces designed for focused learning.</span></div>
+        <div class="feature"><b>⚽ Playground</b><span>Physical activity, teamwork and healthy play.</span></div>
+        <div class="feature"><b>📚 Strong Foundations</b><span>Learning habits, concepts and communication skills.</span></div>
+        <div class="feature"><b>🎨 Creative Activities</b><span>Opportunities to explore creativity and confidence.</span></div>
+        <div class="feature"><b>❤️ Character Building</b><span>Respect, kindness, responsibility and discipline.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><div class="kicker">School Gallery</div><h2>Our learning environment</h2></div>
+    <div class="banners">
+      <div class="banner-card"><img src="assets/school-collage.png" alt="The Springs School Lahore campus and student activities"><div class="banner-caption">School campus & student activities</div></div>
+      <div class="banner-card"><img src="assets/school-banner-1.png" alt="The Springs School Lahore school banner"><div class="banner-caption">The Springs School — Play Group to Matric</div></div>
+      <div class="banner-card"><img src="assets/school-logo.png" alt="The Springs School Lahore official logo"><div class="banner-caption">Official School Logo</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="admissions">
+  <div class="container">
+    <div class="admission">
+      <div class="ad-grid">
+        <div>
+          <div class="kicker">Admissions</div><h2>Give your child a confident start.</h2>
+          <p>Admissions information is available for Play Group through Matric. Contact the school to ask about available classes, admission requirements, timings and the next steps.</p>
+          <ul><li>Play Group to Matric</li><li>Supportive learning environment</li><li>Qualified & caring teachers</li><li>Classroom learning + healthy activities</li><li>Character, confidence & communication</li></ul>
+        </div>
+        <div class="ad-box">
+          <h3>🎓 Admission Enquiry</h3><p>Talk to the school directly on WhatsApp.</p>
+          <a class="primary" href="https://wa.me/923413322777?text=Assalam-o-Alaikum%2C%20I%20would%20like%20information%20about%20admission%20at%20The%20Springs%20School%20Lahore." target="_blank" rel="noopener">💬 Ask About Admission</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="shop">
+  <div class="container">
+    <div class="section-head"><div class="kicker">School Shop</div><h2>Uniform & stationery</h2><p class="lead">Order school essentials through WhatsApp. Add as many pieces as you need — the cart updates the quantity and total automatically.</p></div>
+    <div class="categories" id="categories">
+      <button class="cat active" data-cat="All"><span>🛍️</span>All Items</button>
+      <button class="cat" data-cat="Stationery"><span>✏️</span>Stationery</button>
+      <button class="cat" data-cat="Copies"><span>📚</span>Copies</button>
+      <button class="cat" data-cat="School"><span>🎒</span>School Items</button>
+      <button class="cat" data-cat="Cards"><span>🪪</span>Cards & Supplies</button>
+    </div>
+    <div class="shop-toolbar">
+      <input class="search" id="search" type="search" placeholder="Search pen, copy, diary, logo...">
+      <span id="resultInfo" class="note">13 items</span>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-head"><div class="kicker">Contact</div><h2>Visit or contact The Springs School</h2></div>
+    <div class="location">
+      <div class="location-box">
+        <h3>📍 School Location</h3>
+        <p>Near Noor Park, Kachwana Road, Kahna Nau, Lahore, Pakistan.</p>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=The+Springs+School+Near+Noor+Park+Kachwana+Road+Kahna+Nau+Lahore" target="_blank" rel="noopener">📍 Open in Google Maps</a>
+      </div>
+      <div class="location-box">
+        <h3>📞 Principal</h3>
+        <p><strong>Mr. Shahid Mehmood</strong><br>For school, admission and shop enquiries.</p>
+        <a class="map-link" style="background:var(--green)" href="https://wa.me/923413322777?text=Assalam-o-Alaikum%2C%20I%20would%20like%20to%20contact%20The%20Springs%20School%20Lahore." target="_blank" rel="noopener">💬 WhatsApp: 0341 3322777</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <div><h3>The Springs School Lahore</h3><p>Play Group to Matric • Nurture for today, Learn for tomorrow, Character for Eternity.</p></div>
+    <div><h3>Quick Links</h3><p><a href="#about">About School</a><br><a href="#admissions">Admissions</a><br><a href="#shop">School Shop</a></p></div>
+    <div><h3>Contact</h3><p>Principal: Shahid Mehmood<br>WhatsApp: 0341 3322777<br>Near Noor Park, Kachwana Road, Kahna Nau, Lahore</p></div>
+  </div>
+  <div class="copyright">© 2026 The Springs School Lahore. All rights reserved.</div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay" onclick="if(event.target===this)closeCart()">
+  <aside class="cart-panel">
+    <div class="cart-head"><h2>🛒 Your Cart</h2><button class="close" onclick="closeCart()">✕</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-total"><span>Total</span><span id="cartTotal">Rs. 0</span></div>
+    <form class="checkout" id="checkoutForm">
+      <h3 style="margin-top:12px">Customer details</h3>
+      <label>Customer / Parent Name *</label><input id="customerName" required placeholder="Enter name">
+      <label>Father's Name *</label><input id="fatherName" required placeholder="Enter father's name">
+      <label>Student Name *</label><input id="studentName" required placeholder="Enter student name">
+      <label>Class *</label>
+      <select id="studentClass" required>
+        <option value="">Select class</option><option>Play Group</option><option>Nursery</option><option>Prep</option>
+        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+      </select>
+      <label>Additional note (optional)</label><input id="orderNote" placeholder="Size, section or any other note">
+      <button class="primary" type="submit">💬 Send Order on WhatsApp</button>
+    </form>
+  </aside>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const WHATSAPP_NUMBER = "923413322777";
+
+const products = [
+ {id:1,name:"Pencil",price:20,cat:"Stationery",img:"assets/pen.png",desc:"Smooth school pencil for writing and drawing."},
+ {id:2,name:"Ball Point Pen",price:30,cat:"Stationery",img:"assets/pen.png",desc:"Smooth ball point pen for everyday school work."},
+ {id:3,name:"Marker",price:25,cat:"Stationery",img:"assets/marker.png",desc:"Bright marker for classroom notes and projects."},
+ {id:4,name:"Sheet",price:5,cat:"Stationery",img:"assets/english-copy.png",desc:"School writing sheet for assignments and work."},
+ {id:5,name:"Scale 10",price:10,cat:"Stationery",img:"assets/scale.png",desc:"Plastic school scale — 10 cm."},
+ {id:6,name:"Scale 20",price:20,cat:"Stationery",img:"assets/scale.png",desc:"Plastic school scale — 20 cm."},
+ {id:7,name:"Scale 50",price:50,cat:"Stationery",img:"assets/scale.png",desc:"Plastic school scale — 50 cm."},
+ {id:8,name:"School Diary",price:70,cat:"School",img:"assets/diary.png",desc:"School diary for notes, planning and communication."},
+ {id:9,name:"English Copy",price:120,cat:"Copies",img:"assets/english-copy.png",desc:"Quality copy for English classwork and practice."},
+ {id:10,name:"Urdu Copy",price:120,cat:"Copies",img:"assets/urdu-copy.png",desc:"Quality copy for Urdu classwork and practice."},
+ {id:11,name:"Math Copy",price:120,cat:"Copies",img:"assets/math-copy.png",desc:"Quality copy for mathematics practice."},
+ {id:12,name:"Eraser",price:10,cat:"Stationery",img:"assets/eraser.png",desc:"Soft school eraser for clean corrections."},
+ {id:13,name:"Sharpener",price:10,cat:"Stationery",img:"assets/sharpener.png",desc:"Compact sharpener for pencils."},
+ {id:14,name:"Ink",price:40,cat:"Stationery",img:"assets/ink.png",desc:"Blue writing ink."},
+ {id:15,name:"Fee Card",price:50,cat:"Cards",img:"assets/fee-card.png",desc:"School fee card."},
+ {id:16,name:"School Logo",price:60,cat:"School",img:"assets/school-logo-product.png",desc:"Official school logo item."},
+ {id:17,name:"School Uniform",price:null,cat:"School",img:"assets/uniform.png",desc:"School uniform — contact the school for current size/price details.",inquiry:true}
+];
+
+let cart = JSON.parse(localStorage.getItem("springsCart") || "[]");
+let activeCat = "All";
+
+const grid=document.getElementById("productGrid");
+const search=document.getElementById("search");
+const resultInfo=document.getElementById("resultInfo");
+
+function money(n){return "Rs. " + Number(n).toLocaleString("en-PK");}
+function save(){localStorage.setItem("springsCart",JSON.stringify(cart));renderCart();}
+
+function renderProducts(){
+ const q=search.value.trim().toLowerCase();
+ const filtered=products.filter(p=>(activeCat==="All"||p.cat===activeCat) && (!q || (p.name+" "+p.cat+" "+p.desc).toLowerCase().includes(q)));
+ resultInfo.textContent=filtered.length+" item"+(filtered.length===1?"":"s");
+ grid.innerHTML=filtered.map(p=>`
+   <article class="product">
+     <div class="product-img"><img src="${p.img}" alt="${p.name}"></div>
+     <div class="product-body">
+       <div class="product-cat">${p.cat}</div><h3>${p.name}</h3><p>${p.desc}</p>
+       <div class="price">${p.price===null?"Price on request":money(p.price)}</div>
+       ${p.inquiry?`<a class="primary" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Assalam-o-Alaikum, I want to ask about the School Uniform at The Springs School Lahore. Please share available sizes and current price.")}" target="_blank" rel="noopener">💬 Ask Price / Size</a>`:`<button class="primary" onclick="addToCart(${p.id})">＋ Add to Cart</button>`}
+     </div>
+   </article>`).join("");
+}
+function addToCart(id){
+ const p=products.find(x=>x.id===id);
+ if(!p || p.price===null)return;
+ const found=cart.find(x=>x.id===id);
+ if(found)found.qty++; else cart.push({id,qty:1});
+ save(); toast(p.name+" added to cart"); openCart();
+}
+function changeQty(id,delta){
+ const item=cart.find(x=>x.id===id); if(!item)return;
+ item.qty+=delta; if(item.qty<=0)cart=cart.filter(x=>x.id!==id); save();
+}
+function removeItem(id){cart=cart.filter(x=>x.id!==id);save();}
+function renderCart(){
+ const count=cart.reduce((s,x)=>s+x.qty,0);
+ document.getElementById("cartCount").textContent=count;
+ const wrap=document.getElementById("cartItems");
+ if(!cart.length){wrap.innerHTML='<div class="empty">Your cart is empty.<br>Add school items to continue.</div>';document.getElementById("cartTotal").textContent="Rs. 0";return;}
+ let total=0;
+ wrap.innerHTML=cart.map(x=>{
+   const p=products.find(a=>a.id===x.id); const sub=p.price*x.qty; total+=sub;
+   return `<div class="cart-item"><img src="${p.img}" alt=""><div><b>${p.name}</b><div>${money(p.price)} each</div><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button><strong>${x.qty}</strong><button onclick="changeQty(${p.id},1)">＋</button><button class="remove" onclick="removeItem(${p.id})">Remove</button></div></div><strong>${money(sub)}</strong></div>`;
+ }).join("");
+ document.getElementById("cartTotal").textContent=money(total);
+}
+function cartTotal(){return cart.reduce((s,x)=>{const p=products.find(a=>a.id===x.id);return s+(p.price*x.qty)},0)}
+function openCart(){document.getElementById("cartOverlay").classList.add("show");document.body.style.overflow="hidden";renderCart();}
+function closeCart(){document.getElementById("cartOverlay").classList.remove("show");document.body.style.overflow="";}
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1800)}
+
+document.querySelectorAll(".cat").forEach(btn=>btn.addEventListener("click",()=>{
+ document.querySelectorAll(".cat").forEach(b=>b.classList.remove("active"));btn.classList.add("active");activeCat=btn.dataset.cat;renderProducts();
+}));
+search.addEventListener("input",renderProducts);
+document.getElementById("checkoutForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ if(!cart.length){toast("Please add an item first.");return;}
+ const customer=document.getElementById("customerName").value.trim();
+ const father=document.getElementById("fatherName").value.trim();
+ const student=document.getElementById("studentName").value.trim();
+ const cls=document.getElementById("studentClass").value;
+ const note=document.getElementById("orderNote").value.trim();
+ let lines=cart.map(x=>{const p=products.find(a=>a.id===x.id);return `• ${p.name} × ${x.qty} = ${money(p.price*x.qty)}`});
+ const msg=[
+  "Assalam-o-Alaikum, The Springs School Lahore.",
+  "",
+  "SCHOOL SHOP ORDER",
+  "Customer/Parent: "+customer,
+  "Father's Name: "+father,
+  "Student Name: "+student,
+  "Class: "+cls,
+  "",
+  ...lines,
+  "",
+  "TOTAL: "+money(cartTotal()),
+  note ? "Note: "+note : "",
+  "",
+  "Please confirm availability and order details."
+ ].filter(Boolean).join("\n");
+ window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(msg),"_blank");
+});
+
+document.getElementById("menuBtn").addEventListener("click",()=>document.getElementById("navLinks").classList.toggle("open"));
+document.querySelectorAll("#navLinks a").forEach(a=>a.addEventListener("click",()=>document.getElementById("navLinks").classList.remove("open")));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeCart()});
+
+renderProducts();renderCart();
+</script>
+</body>
+</html>
